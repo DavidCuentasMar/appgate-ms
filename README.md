@@ -15,13 +15,12 @@
         - [GET]  - http://localhost:8000/metrics/isipinternal
         - [GET]  - http://localhost:8000/metrics/failedlogincountlastweek
 
-    Each endpoint has this response structure as JSON:
-    
-    ```JSON
-    {
-        "result": "DATA RESPONSE"
-    }
-    ```
+Each endpoint has this response structure as JSON:
+```JSON
+{
+"result": "DATA RESPONSE"
+}
+```
     
 # IMPORTANT NOTES
 - The meaning of each column in logs.txt file is: [DATE, TIME, SERVERNAME, [USER_ID:CLIENT_ID, MSG]]

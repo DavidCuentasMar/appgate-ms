@@ -1,0 +1,25 @@
+version: '3.7'
+
+services:
+  api:
+    build: .
+    volumes:
+      - $PWD/:/app
+    #command: python3 flask_app/server.py
+    restart: always
+    #stdin_open: after docker-compose up --build this keeps it terminal
+    stdin_open: true
+    #tty: i think this lets you show prints
+    tty: true
+    ports:
+      - "8000:8000"
+    extra_hosts:
+      - "host.docker.internal:192.168.0.3"
+  #db:
+    #image: mongo:latest
+    #ports:
+      #- 27017:27017    
+    #volumes:
+      #- mongodb:/data/db
+#volumes:
+  #mongodb:

@@ -1,0 +1,5 @@
+datetime,servername,user_id,client_id,msg
+2014-06-16 05:42:52,vm5,4f8a7f94,533e226f,"sshd transport algorithms: direction=client->server cipher=aes128-ctr mac=hmac-sha1 compression=none
+"
+2014-06-16 05:42:52,vm5,4f8a7f94,533e226f,"sshd transport algorithms: direction=client->server cipher=aes128-ctr mac=hmac-sha1 compression=none
+"

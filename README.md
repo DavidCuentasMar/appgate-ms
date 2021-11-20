@@ -2,7 +2,10 @@
 
 ## HOW TO RUN MS
 - Execute this in terminal: docker-compose up --build
-- After the build is completed the user can start making requests at its localhost:8000
+- Open new terminal windows and execute: docker-compose exec api ash
+- Run this command: FLASK_APP=flask_app FLASK_ENV=development flask run --host=0.0.0.0 --port
+=8000
+- Now the user can start making requests at its localhost:8000
 
 # ENDPOINTS
     This service provides 7 endpoints:
@@ -101,3 +104,16 @@ Each endpoint has this response structure as JSON:
         - NONE
     - **DESCRIPTION:**
         - Returns Integer, Count of all connections attemps that contains "SUSPEC"
+
+# TESTING:
+    - In order to run tests use the following command: python -m pytest -vv
+
+# IMPORTANT NOTES:
+    - The values that match this pattern [value1:value2] in logs file are considered as [user_id:client_id]
+    - In this basic implementation when tests are executed the historical metris logs stores test data
+    - Failedlogincountlastweek checks from current date to 7 days before
+    - There's no complexity in searching proceess if a given value is just found in a specific column that's considered a positive result
+    - Since alpine image is been used, it slows down the docker image building process (5 to 15 mins)
+    - Logs file structure: DATE, TIME, SERVERNAME, [USER:CLIENT], MESSAGE
+
+

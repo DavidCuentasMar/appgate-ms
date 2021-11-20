@@ -49,13 +49,12 @@ def handle_logs(file):
     file.save(os.path.join("./logs.txt"))
     create_file()
 
-
 def is_user_known(dt, data_to_check, single=True):
     data = dt.loc[dt['user_id'].str.contains(data_to_check)]    
     return data
 
 def is_client_known(dt, data_to_check, single=True):
-    data = dt.loc[dt['client_id'].str.contains(data_to_check)]
+    data = dt.loc[dt['client_id'] == (data_to_check)]
     return data
 
 def is_ip_known(dt, data_to_check, single=True):
@@ -74,6 +73,3 @@ def failed_login_count_last_week(dt):
     date_to = datetime.today()
     data = dt.loc[ (dt['datetime'] > str(date_from)) & (dt['datetime'] < str(date_to)) & dt['msg'].str.contains('SUSPECT')]
     return data
-
-
-create_file()

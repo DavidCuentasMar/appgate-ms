@@ -3,8 +3,7 @@
 ## HOW TO RUN MS
 - Execute this in terminal: docker-compose up --build
 - Open new terminal windows and execute: docker-compose exec api ash
-- Run this command: FLASK_APP=flask_app FLASK_ENV=development flask run --host=0.0.0.0 --port
-=8000
+- Run this command: FLASK_APP=flask_app FLASK_ENV=development flask run --host=0.0.0.0 --port=8000
 - Now the user can start making requests at its localhost:8000
 
 # ENDPOINTS
